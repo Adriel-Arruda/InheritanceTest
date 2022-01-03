@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Inheritance.Entities
 {
-    internal class SavingsAccount : Account
+    sealed class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
         public SavingsAccount()
-        {    
+        {
         }
         public SavingsAccount(int number, string holder, double balance, double interestRate) : base(number, holder, balance)
         {
-           InterestRate = interestRate;
+            InterestRate = interestRate;
         }
         public void UpdateBalance()
         {
